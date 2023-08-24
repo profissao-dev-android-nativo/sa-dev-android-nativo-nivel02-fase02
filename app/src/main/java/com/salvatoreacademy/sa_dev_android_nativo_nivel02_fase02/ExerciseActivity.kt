@@ -2,6 +2,8 @@ package com.salvatoreacademy.sa_dev_android_nativo_nivel02_fase02
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 
 class ExerciseActivity : AppCompatActivity() {
@@ -10,9 +12,9 @@ class ExerciseActivity : AppCompatActivity() {
         setContentView(R.layout.activity_exercise)
 
         val tvResult = findViewById<TextView>(R.id.tvResult)
-        val etEmail = findViewById<TextView>(R.id.etEmail)
-        val btSend = findViewById<TextView>(R.id.btSend)
-        val btClear = findViewById<TextView>(R.id.btClear)
+        val etEmail = findViewById<EditText>(R.id.etEmail)
+        val btSend = findViewById<Button>(R.id.btSend)
+        val btClear = findViewById<Button>(R.id.btClear)
 
         // Button Send Behavior
         btSend.setOnClickListener {
@@ -28,7 +30,7 @@ class ExerciseActivity : AppCompatActivity() {
         // Button Clear Behavior
         btClear.setOnClickListener {
             tvResult.text = ""
-            etEmail.text = ""
+            etEmail.text = null
         }
     }
 }
