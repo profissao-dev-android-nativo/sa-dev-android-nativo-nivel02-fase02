@@ -14,6 +14,7 @@ class ExerciseActivity : AppCompatActivity() {
         val btSend = findViewById<TextView>(R.id.btSend)
         val btClear = findViewById<TextView>(R.id.btClear)
 
+        // Button Send Behavior
         btSend.setOnClickListener {
             val email = etEmail.text.toString()
 
