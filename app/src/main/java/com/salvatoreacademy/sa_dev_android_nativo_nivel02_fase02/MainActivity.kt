@@ -1,10 +1,11 @@
 package com.salvatoreacademy.sa_dev_android_nativo_nivel02_fase02
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         // var -> variáveis que podem mudar de valor
         val btSend = findViewById<Button>(R.id.btSend)
         val tvResult = findViewById<TextView>(R.id.tvResult)
-        val etName = findViewById<TextView>(R.id.etName)
+        val etName = findViewById<EditText>(R.id.etName)
+        val btClear = findViewById<Button>(R.id.btClear)
 
         // Declarar um Listener
         btSend.setOnClickListener {
@@ -27,6 +29,11 @@ class MainActivity : AppCompatActivity() {
             tvResult.text = etName.text.toString()
 
             Toast.makeText(this, "Updated successfully.", Toast.LENGTH_SHORT).show()
+        }
+
+        btClear.setOnClickListener {
+            tvResult.text = null
+            etName.text = null
         }
     }
 }
