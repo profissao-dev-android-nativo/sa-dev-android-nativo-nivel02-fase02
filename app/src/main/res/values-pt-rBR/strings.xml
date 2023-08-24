@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">sa-dev-android-nativo-nivel02-fase02</string>
+    <string name="insert_your_name">Insira seu nome</string>
+    <string name="send">Enviar</string>
+    <string name="clear">Limpar</string>
+    <string name="updated_successfully">Atualizado com sucesso.</string>
+    <string name="cleared_successfully">Limpo com sucesso.</string>
+    <string name="text_reverted">Texto revertido.</string>
+    <string name="undo">Desfazer</string>
+</resources>

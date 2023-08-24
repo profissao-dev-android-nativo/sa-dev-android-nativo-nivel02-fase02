@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             // Tudo que eu escrever dentro das chaves, será executado quando clicar no botão
             tvResult.text = etName.text.toString()
 
-            Toast.makeText(this, "Updated successfully.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.updated_successfully), Toast.LENGTH_SHORT).show()
         }
 
         btClear.setOnClickListener {
@@ -40,12 +40,13 @@ class MainActivity : AppCompatActivity() {
             etName.text = null
 
             val constraintLayout = findViewById<View>(R.id.constraintLayout)
-            Snackbar.make(constraintLayout, "Cleared successfully.", Snackbar.LENGTH_INDEFINITE)
-                .setAction("Undo") {
+            Snackbar.make(constraintLayout,
+                getString(R.string.cleared_successfully), Snackbar.LENGTH_INDEFINITE)
+                .setAction(getString(R.string.undo)) {
                     tvResult.text = oldText
                     etName.setText(oldText)
 
-                    Toast.makeText(this, "Text reverted.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.text_reverted), Toast.LENGTH_SHORT).show()
                 }
                 .show()
         }
