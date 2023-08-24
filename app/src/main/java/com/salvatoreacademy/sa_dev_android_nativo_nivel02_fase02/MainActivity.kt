@@ -1,11 +1,13 @@
 package com.salvatoreacademy.sa_dev_android_nativo_nivel02_fase02
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +34,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         btClear.setOnClickListener {
+            val oldText = tvResult.text
+
             tvResult.text = null
             etName.text = null
+
+            val constraintLayout = findViewById<View>(R.id.constraintLayout)
+            Snackbar.make(constraintLayout, "Cleared successfully.", Snackbar.LENGTH_INDEFINITE)
+                .setAction("Undo") {
+                    tvResult.text = oldText
+                    etName.setText(oldText)
+
+                    Toast.makeText(this, "Text reverted.", Toast.LENGTH_SHORT).show()
+                }
+                .show()
         }
     }
 }
