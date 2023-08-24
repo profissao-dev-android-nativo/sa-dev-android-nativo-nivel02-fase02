@@ -12,6 +12,7 @@ class ExerciseActivity : AppCompatActivity() {
         val tvResult = findViewById<TextView>(R.id.tvResult)
         val etEmail = findViewById<TextView>(R.id.etEmail)
         val btSend = findViewById<TextView>(R.id.btSend)
+        val btClear = findViewById<TextView>(R.id.btClear)
 
         btSend.setOnClickListener {
             val email = etEmail.text.toString()
@@ -21,6 +22,12 @@ class ExerciseActivity : AppCompatActivity() {
             } else {
                 tvResult.text = email
             }
+        }
+
+        // Button Clear Behavior
+        btClear.setOnClickListener {
+            tvResult.text = ""
+            etEmail.text = ""
         }
     }
 }
