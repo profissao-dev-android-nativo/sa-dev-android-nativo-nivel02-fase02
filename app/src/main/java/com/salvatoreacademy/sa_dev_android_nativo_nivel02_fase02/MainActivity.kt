@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         btSend.setOnClickListener {
             // Tudo que eu escrever dentro das chaves, será executado quando clicar no botão
             tvResult.text = etName.text.toString()
+
+            Toast.makeText(this, "Updated successfully.", Toast.LENGTH_SHORT).show()
         }
     }
 }
