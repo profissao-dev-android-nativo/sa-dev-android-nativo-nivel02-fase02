@@ -16,7 +16,11 @@ class ExerciseActivity : AppCompatActivity() {
         btSend.setOnClickListener {
             val email = etEmail.text.toString()
 
-            tvResult.text = email
+            if (email.isBlank()) {
+                etEmail.error = "Please enter a valid e-mail address!"
+            } else {
+                tvResult.text = email
+            }
         }
     }
 }
