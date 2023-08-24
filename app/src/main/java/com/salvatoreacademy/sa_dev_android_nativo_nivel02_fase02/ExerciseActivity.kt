@@ -2,6 +2,7 @@ package com.salvatoreacademy.sa_dev_android_nativo_nivel02_fase02
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -21,6 +22,8 @@ class ExerciseActivity : AppCompatActivity() {
             val email = etEmail.text.toString()
 
             if (email.isBlank()) {
+                etEmail.error = "Insert your e-mail address!"
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 etEmail.error = "Please enter a valid e-mail address!"
             } else {
                 tvResult.text = email
