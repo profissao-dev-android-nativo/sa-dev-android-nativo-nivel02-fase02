@@ -8,14 +8,9 @@
     <string name="cleared_successfully">Limpo com sucesso.</string>
     <string name="text_reverted">Texto revertido.</string>
     <string name="undo">Desfazer</string>
-    <string name="insert_your_name_2">Insira seu nome</string>
     <string name="insert_your_email">Insira seu e-mail</string>
-    <string name="send_2">Enviar</string>
-    <string name="clear_2">Limpar</string>
     <string name="insert_your_name_error">Insira seu nome!</string>
     <string name="insert_your_email_error">Insira seu e-mail!</string>
     <string name="please_enter_a_valid_email">Por favor, insira um e-mail válido!</string>
     <string name="inputs_updated_successfully">Campos atualizados com sucesso!</string>
-    <string name="cleared_successfully_2">Campos limpos com sucesso!</string>
-    <string name="undo_2">Desfazer</string>
 </resources>

@@ -67,8 +67,8 @@ class ExerciseActivity : AppCompatActivity() {
             etEmail.text = null
 
             Snackbar.make(constraintLayout,
-                getString(R.string.cleared_successfully_2), Snackbar.LENGTH_LONG)
-                .setAction(getString(R.string.undo_2)) {
+                getString(R.string.cleared_successfully), Snackbar.LENGTH_LONG)
+                .setAction(getString(R.string.undo)) {
                     tvName.text = name
                     tvEmail.text = email
 
