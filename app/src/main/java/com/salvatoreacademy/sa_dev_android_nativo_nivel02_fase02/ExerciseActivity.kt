@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
+import com.google.android.material.snackbar.Snackbar
 
 class ExerciseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +21,7 @@ class ExerciseActivity : AppCompatActivity() {
         val etEmail = findViewById<EditText>(R.id.etEmail)
         val btSend = findViewById<Button>(R.id.btSend)
         val btClear = findViewById<Button>(R.id.btClear)
+        val constraintLayout = findViewById<ConstraintLayout>(R.id.constraintLayout)
 
         // Button Send Behavior
         btSend.setOnClickListener {
@@ -50,8 +53,27 @@ class ExerciseActivity : AppCompatActivity() {
 
         // Button Clear Behavior
         btClear.setOnClickListener {
+            val name = tvName.text
+            val email = tvEmail.text
+
+            val nameInput = etName.text
+            val emailInput = etEmail.text
+
+            tvName.text = ""
             tvEmail.text = ""
+
+            etName.text = null
             etEmail.text = null
+
+            Snackbar.make(constraintLayout, "Cleared successfully!", Snackbar.LENGTH_LONG)
+                .setAction("Undo") {
+                    tvName.text = name
+                    tvEmail.text = email
+
+                    etName.text = nameInput
+                    etEmail.text = emailInput
+                }
+                .show()
         }
     }
 }
