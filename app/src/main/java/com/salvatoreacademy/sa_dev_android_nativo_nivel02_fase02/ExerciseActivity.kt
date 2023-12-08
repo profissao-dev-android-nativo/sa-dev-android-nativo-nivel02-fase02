@@ -31,15 +31,15 @@ class ExerciseActivity : AppCompatActivity() {
             var isValid = true
 
             if (name.isBlank()) {
-                etName.error = "Insert your name!"
+                etName.error = getString(R.string.insert_your_name_error)
                 isValid = false
             }
 
             if (email.isBlank()) {
-                etEmail.error = "Insert your e-mail address!"
+                etEmail.error = getString(R.string.insert_your_email_error)
                 isValid = false
             } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                etEmail.error = "Please enter a valid e-mail address!"
+                etEmail.error = getString(R.string.please_enter_a_valid_email)
                 isValid = false
             }
 
@@ -47,7 +47,8 @@ class ExerciseActivity : AppCompatActivity() {
                 tvName.text = name
                 tvEmail.text = email
 
-                Toast.makeText(this, "Inputs updated successfully!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,
+                    getString(R.string.inputs_updated_successfully), Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -65,8 +66,9 @@ class ExerciseActivity : AppCompatActivity() {
             etName.text = null
             etEmail.text = null
 
-            Snackbar.make(constraintLayout, "Cleared successfully!", Snackbar.LENGTH_LONG)
-                .setAction("Undo") {
+            Snackbar.make(constraintLayout,
+                getString(R.string.cleared_successfully_2), Snackbar.LENGTH_LONG)
+                .setAction(getString(R.string.undo_2)) {
                     tvName.text = name
                     tvEmail.text = email
 

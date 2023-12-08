@@ -7,4 +7,14 @@
     <string name="cleared_successfully">Cleared successfully.</string>
     <string name="text_reverted">Text reverted.</string>
     <string name="undo">Undo</string>
+    <string name="insert_your_name_2">Insert your name</string>
+    <string name="insert_your_email">Insert your e-mail</string>
+    <string name="send_2">Send</string>
+    <string name="clear_2">Clear</string>
+    <string name="insert_your_name_error">Insert your name!</string>
+    <string name="insert_your_email_error">Insert your e-mail address!</string>
+    <string name="please_enter_a_valid_email">Please enter a valid e-mail address!</string>
+    <string name="inputs_updated_successfully">Inputs updated successfully!</string>
+    <string name="cleared_successfully_2">Cleared successfully!</string>
+    <string name="undo_2">Undo</string>
 </resources>
