@@ -12,7 +12,7 @@ class ExerciseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
 
-        val tvResult = findViewById<TextView>(R.id.tvResult)
+        val tvResult = findViewById<TextView>(R.id.tvEmail)
         val etEmail = findViewById<EditText>(R.id.etEmail)
         val btSend = findViewById<Button>(R.id.btSend)
         val btClear = findViewById<Button>(R.id.btClear)
